@@ -2,6 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+
+<!-- 📱 Mobile Fix -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Happy Birthday BABA ❤️</title>
 
 <style>
@@ -23,6 +27,7 @@ body {
   text-align: center;
   opacity: 0;
   transition: opacity 1s ease-in-out;
+  padding: 20px;
 }
 
 .active {
@@ -36,23 +41,25 @@ body {
 .slide4 { background: linear-gradient(to right, #d4fc79, #96e6a1); }
 .slide5 { background: linear-gradient(to right, #fbc2eb, #a6c1ee); }
 .slide6 { background: linear-gradient(to right, #fddb92, #d1fdff); }
+.slide7 { background: linear-gradient(to right, #ffecd2, #fcb69f); }
 
-/* Text */
+/* Text (Responsive) */
 h1 {
-  font-size: 3rem;
+  font-size: 7vw;
   color: #333;
 }
 
 p {
-  font-size: 1.2rem;
-  max-width: 600px;
+  font-size: 4.5vw;
+  max-width: 90%;
   color: #444;
 }
 
-/* Image */
+/* Image (Responsive) */
 img {
-  width: 280px;
-  height: 280px;
+  width: 85%;
+  max-width: 350px;
+  height: auto;
   border-radius: 20px;
   margin-top: 20px;
   object-fit: cover;
@@ -61,7 +68,7 @@ img {
 }
 
 img:hover {
-  transform: scale(1.08);
+  transform: scale(1.05);
 }
 
 /* Hearts */
@@ -85,7 +92,7 @@ img:hover {
   <source src="music.mp3" type="audio/mp3">
 </audio>
 
-<!-- Slide 1 (Typing) -->
+<!-- Slide 1 -->
 <div class="slide slide1 active">
   <h1 id="typing"></h1>
   <p id="typing2"></p>
@@ -94,38 +101,38 @@ img:hover {
 <!-- Slide 2 -->
 <div class="slide slide2">
   <h1>Thank You BABA 🙏</h1>
-  <p>For your love and endless support 💛</p>
+  <p>For your unconditional love and endless support 💛</p>
   <img src="photo1.jpg">
 </div>
 
 <!-- Slide 3 -->
 <div class="slide slide3">
-  <h1>o shet tumhi manus ahe ley great</h1>
+  <h1>You Always Make Me Smile 😊</h1>
   <img src="photo2.jpg">
 </div>
 
 <!-- Slide 4 -->
 <div class="slide slide4">
-  <h1>Lucky to Have You BABA. 💫</h1>
+  <h1>I Am So Lucky to Have You 💫</h1>
   <img src="photo3.jpg">
 </div>
 
 <!-- Slide 5 -->
 <div class="slide slide5">
-  <h1>My Inspiration BABA AND MUMMA 💖</h1>
+  <h1>My Inspiration – You & Mumma 💖</h1>
   <img src="photo4.jpg">
 </div>
 
 <!-- Slide 6 -->
 <div class="slide slide6">
-  <h1>I Love You BABA ❤️</h1>
+  <h1>I Love You So Much BABA ❤️</h1>
   <p>Stay happy and healthy always 💛</p>
   <img src="photo5.jpg">
 </div>
 
 <!-- Slide 7 -->
-<div class="slide slide1">
-  <h1>Forever Grateful To  Be Your Child 🙏</h1>
+<div class="slide slide7">
+  <h1>Forever Grateful to Be Your Child 🙏</h1>
   <img src="photo6.jpg">
 </div>
 
@@ -133,13 +140,11 @@ img:hover {
 let current = 0;
 const slides = document.querySelectorAll(".slide");
 
-/* Slide change */
 function nextSlide() {
   slides[current].classList.remove("active");
   current = (current + 1) % slides.length;
   slides[current].classList.add("active");
 
-  // play music on first click
   document.getElementById("bgMusic").play();
 }
 
@@ -186,9 +191,8 @@ setInterval(createHeart, 300);
 
 /* Final Surprise */
 setTimeout(() => {
-  alert("BABA❤️ Thank you for everything. I love you forever 💛");
+  alert("BABA ❤️ Thank you for everything. I love you forever 💛");
 }, 20000);
-
 </script>
 
 </body>
